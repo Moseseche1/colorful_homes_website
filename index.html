@@ -1,21 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Colorful Homes Construction Company - Building dreams with quality and trust.">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Colorful Homes Construction Company</title>
 </head>
+    
 <body class="font-poppins">
     <!-- Header -->
     <header class="sticky top-0 bg-orange-500 text-white p-4 flex justify-between items-center z-50">
+        
         <div class="text-xl font-bold">Colorful Homes Construction Company</div>
         <nav class="hidden md:flex space-x-6">
+            
             <ul class="flex space-x-6">
                 <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
                 <li><a href="#about" class="hover:text-yellow-300">About Us</a></li>
+                
                 <li><a href="#services" class="hover:text-yellow-300">Services</a></li>
                 <li><a href="#portfolio" class="hover:text-yellow-300">Portfolio</a></li>
                 <li><a href="#blog" class="hover:text-yellow-300">Blog</a></li>
@@ -23,7 +31,8 @@
             </ul>
         </nav>
         <a href="#quote" class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-700 text-white">Get a Quote</a>
-        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+            
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
@@ -31,36 +40,49 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('https://via.placeholder.com/1920x1080');">
+    <section id="home" class="bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('https://via.placeholder.com/1920x1080');">
         <div class="text-center">
             <h1 class="text-4xl font-bold mb-4">Building Dreams, Creating Futures.</h1>
             <p class="text-lg mb-6">Trusted construction and real estate solutions across the globe.</p>
+            
             <div class="space-x-4">
                 <a href="#portfolio" class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-700">View Projects</a>
                 <a href="#quote" class="bg-yellow-600 px-4 py-2 rounded hover:bg-yellow-700">Get a Free Quote</a>
+                
             </div>
+            
         </div>
     </section>
+    
 
     <!-- About Preview -->
     <section id="about" class="py-12 px-4 flex flex-col md:flex-row items-center gap-6">
+        
         <div class="w-full md:w-1/2">
             <img src="https://via.placeholder.com/500x300" alt="Ongoing Project" class="rounded-lg">
         </div>
+        
         <div class="w-full md:w-1/2">
             <h2 class="text-2xl font-bold mb-4">About Us</h2>
             <p class="mb-4">We are a global construction company dedicated to transforming spaces into colorful realities. With years of expertise, we deliver excellence in every project.</p>
             <a href="#about" class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-700 text-white">Learn More →</a>
+    
         </div>
     </section>
+    
 
     <!-- Services Section -->
+    
     <section id="services" class="py-12 px-4 bg-gray-100 text-center">
         <h2 class="text-2xl font-bold mb-6">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            
             <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
+                
                 <span class="text-3xl mb-2 block">🏗️</span>
+                
                 <h3 class="text-xl font-semibold">Construction & Renovation</h3>
+                
                 <p>Expert building and refurbishing tailored to your needs.</p>
             </div>
             <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
@@ -70,24 +92,32 @@
             </div>
             <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
                 <span class="text-3xl mb-2 block">🎨</span>
+                
                 <h3 class="text-xl font-semibold">Design & Consultancy</h3>
+                
                 <p>Creative designs and expert advice for your projects.</p>
             </div>
             <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
+                
                 <span class="text-3xl mb-2 block">🌍</span>
                 <h3 class="text-xl font-semibold">Global Projects & Partnerships</h3>
                 <p>Collaborating worldwide for sustainable growth.</p>
+                
             </div>
         </div>
+ 
     </section>
 
     <!-- Portfolio Gallery -->
+    
     <section id="portfolio" class="py-12 px-4 text-center">
         <h2 class="text-2xl font-bold mb-6">Our Portfolio</h2>
         <div class="flex justify-center mb-4 space-x-4">
+            
             <button class="bg-yellow-600 px-3 py-1 rounded text-white hover:bg-yellow-700">Residential</button>
             <button class="bg-yellow-600 px-3 py-1 rounded text-white hover:bg-yellow-700">Commercial</button>
             <button class="bg-yellow-600 px-3 py-1 rounded text-white hover:bg-yellow-700">Luxury</button>
+            
             <button class="bg-yellow-600 px-3 py-1 rounded text-white hover:bg-yellow-700">Infrastructure</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -136,6 +166,7 @@
         <div class="bg-black bg-opacity-50 p-6 rounded-lg text-center text-white">
             <h2 class="text-2xl font-bold mb-4">Ready to build your dream project?</h2>
             <a href="#contact" class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-700">Request a Quote Now</a>
+            
         </div>
     </section>
 
@@ -150,24 +181,32 @@
                 <textarea placeholder="Message" required class="w-full p-2 border rounded h-24"></textarea>
                 <button type="submit" class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-700 text-white">Send Message</button>
             </form>
+            
         </div>
         <div class="w-full md:w-1/2">
             <h2 class="text-2xl font-bold mb-4">Contact Details</h2>
+            
             <p class="mb-2">📍 Address: No. 6 High Level, Makurdi, Benue State, Nigeria</p>
             <p class="mb-2">📞 Phone: +234 706 176 7623</p>
             <p class="mb-2">📧 Email: colorfulhomes16@gmail.com</p>
+            
             <div class="map-placeholder h-48 bg-gray-300 rounded mt-4">Google Maps Embed Here</div>
         </div>
+        
     </section>
+    
 
     <!-- Footer -->
     <footer class="py-4 px-4 bg-gray-800 text-white text-center">
+        
         <div class="mb-2">
             <a href="#home" class="mr-4 hover:text-yellow-300">Home</a>
             <a href="#about" class="mr-4 hover:text-yellow-300">About Us</a>
+            
             <a href="#services" class="mr-4 hover:text-yellow-300">Services</a>
             <a href="#portfolio" class="mr-4 hover:text-yellow-300">Portfolio</a>
             <a href="#blog" class="mr-4 hover:text-yellow-300">Blog</a>
+            
             <a href="#contact" class="mr-4 hover:text-yellow-300">Contact</a>
         </div>
         <div class="mb-2">
@@ -175,11 +214,15 @@
             <a href="#" class="mr-2 hover:text-yellow-300">Instagram</a>
             <a href="#" class="mr-2 hover:text-yellow-300">LinkedIn</a>
             <a href="#" class="mr-2 hover:text-yellow-300">Twitter</a>
+            
         </div>
         <p>RC: 6920460</p>
         <p>Copyright © 2025 Colorful Homes Construction Company</p>
+        
     </footer>
 
     <script src="script.js"></script>
+    
 </body>
-                    </html>
+    
+ </html>
