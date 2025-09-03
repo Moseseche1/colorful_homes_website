@@ -11,12 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Check HTML
+    - name: Setup HTML Validator
       run: |
-        # Install html-validator
-        npm install -g vnu-jar
-        java -jar ~/vnu.jar *.html
+        # Download the validator
+        wget -O ~/vnu.jar https://github.com/validator/validator/releases/latest/download/vnu.jar
+    - name: Validate HTML
+      run: |
+        # Check HTML files
+        java -jar ~/vnu.jar --skip-non-html *.html
     - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
