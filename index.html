@@ -1,296 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Colorful Homes Construction Company - Building dreams with quality and trust.">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <title>Colorful Homes Construction Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171817">
+  <meta name="description" content="Colorful Homes creates considered luxury interiors, architectural lighting and acoustic environments across Nigeria. Better spaces. Better experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Colorful Homes | Better Spaces. Better Experiences.">
+  <meta property="og:description" content="Luxury interiors, intelligent acoustics and architectural lighting.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85">
+  <title>Colorful Homes | Luxury Interiors & Intelligent Acoustics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
-    
-<body class="font-poppins">
-    <!-- Header -->
-    <header class="sticky top-0 bg-orange-500 text-white p-4 flex justify-between items-center z-50 shadow-md">
-        <div class="text-xl font-bold flex items-center">
-            <i class="fas fa-home mr-2"></i>
-            <span>Colorful Homes</span>
-        </div>
-        <nav class="hidden md:flex space-x-6">
-            <ul class="flex space-x-6">
-                <li><a href="#home" class="nav-link hover:text-yellow-300">Home</a></li>
-                <li><a href="#about" class="nav-link hover:text-yellow-300">About Us</a></li>
-                <li><a href="#services" class="nav-link hover:text-yellow-300">Services</a></li>
-                <li><a href="#portfolio" class="nav-link hover:text-yellow-300">Portfolio</a></li>
-                <li><a href="#testimonials" class="nav-link hover:text-yellow-300">Testimonials</a></li>
-                <li><a href="#contact" class="nav-link hover:text-yellow-300">Contact</a></li>
-            </ul>
-        </nav>
-        <a href="#quote" class="hidden md:inline-block bg-teal-600 px-4 py-2 rounded-lg hover:bg-teal-700 text-white btn">Get a Quote</a>
-        <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </button>
-    </header>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Colorful Homes home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="brand-name">COLORFUL<span>HOMES</span><small>CONSTRUCTION COMPANY</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#approach">Our approach</a><a href="#services">Expertise</a><a href="#work">Selected work</a><a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Start a conversation <span>↗</span></a>
+    </nav>
+  </header>
 
-    <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-64 bg-orange-500 text-white p-6 z-40 md:hidden">
-        <button id="menu-close" class="absolute top-4 right-4 text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
-        <ul class="space-y-6 mt-10">
-            <li><a href="#home" class="block py-2 hover:text-yellow-300">Home</a></li>
-            <li><a href="#about" class="block py-2 hover:text-yellow-300">About Us</a></li>
-            <li><a href="#services" class="block py-2 hover:text-yellow-300">Services</a></li>
-            <li><a href="#portfolio" class="block py-2 hover:text-yellow-300">Portfolio</a></li>
-            <li><a href="#testimonials" class="block py-2 hover:text-yellow-300">Testimonials</a></li>
-            <li><a href="#contact" class="block py-2 hover:text-yellow-300">Contact</a></li>
-        </ul>
-        <a href="#quote" class="mt-6 inline-block bg-teal-600 px-4 py-2 rounded-lg hover:bg-teal-700 text-white btn">Get a Quote</a>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="home" class="bg-cover bg-center h-screen flex items-center justify-center text-white relative" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
-        <div class="text-center max-w-3xl mx-4">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Building Dreams, Creating Futures.</h1>
-            <p class="text-lg mb-8">Trusted construction and real estate solutions across the globe with over 15 years of experience.</p>
-            <div class="space-x-4">
-                <a href="#portfolio" class="bg-teal-600 px-6 py-3 rounded-lg hover:bg-teal-700 text-white font-semibold btn">View Projects</a>
-                <a href="#contact" class="bg-orange-600 px-6 py-3 rounded-lg hover:bg-orange-700 text-white font-semibold btn">Contact Us</a>
-            </div>
-        </div>
-        <a href="#about" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <i class="fas fa-chevron-down text-2xl text-white"></i>
-        </a>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="Warm contemporary luxury interior with architectural lighting"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow light"><span></span> DESIGN • BUILD • EXPERIENCE</p>
+        <h1>Spaces that look<br>exceptional. <em>Feel</em><br>even better.</h1>
+        <p class="hero-copy">We bring luxury interiors, architectural lighting and intelligent acoustics together to shape environments that perform beautifully.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#contact">Discuss your project <span>↗</span></a><a class="text-link light-link" href="#work">Explore our work <span>↓</span></a></div>
+      </div>
+      <div class="hero-note"><span>01 / 04</span><span>BETTER SPACES. BETTER EXPERIENCES.</span></div>
     </section>
 
-    <!-- About Preview -->
-    <section id="about" class="py-16 px-4 flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
-        <div class="w-full md:w-1/2">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction team working on a project" class="rounded-lg shadow-lg" loading="lazy">
-        </div>
-        <div class="w-full md:w-1/2">
-            <h2 class="text-3xl font-bold mb-4 text-gray-800">About Colorful Homes</h2>
-            <p class="mb-4 text-gray-600">We are a global construction company dedicated to transforming spaces into colorful realities. With years of expertise, we deliver excellence in every project.</p>
-            <p class="mb-4 text-gray-600">Our team of experienced professionals ensures that every project is completed to the highest standards, on time and within budget.</p>
-            <div class="grid grid-cols-2 gap-4 my-6">
-                <div class="flex items-center">
-                    <i class="fas fa-check-circle text-teal-600 mr-2"></i>
-                    <span class="text-gray-700">Licensed & Insured</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-check-circle text-teal-600 mr-2"></i>
-                    <span class="text-gray-700">15+ Years Experience</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-check-circle text-teal-600 mr-2"></i>
-                    <span class="text-gray-700">Quality Materials</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-check-circle text-teal-600 mr-2"></i>
-                    <span class="text-gray-700">Timely Completion</span>
-                </div>
-            </div>
-            <a href="#about" class="bg-teal-600 px-6 py-3 rounded-lg hover:bg-teal-700 text-white font-semibold inline-flex items-center btn">
-                Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-        </div>
+    <section class="intro section-pad" id="approach">
+      <div class="intro-label"><p class="eyebrow">OUR POINT OF VIEW</p><span class="rule"></span><p class="small-muted">Beyond aesthetics</p></div>
+      <div class="intro-main"><h2>Luxury is not just what you <em>see.</em><br>It is what you <em>experience.</em></h2><p class="intro-copy">A beautiful room can still feel uncomfortable. Sound can distract. Light can fatigue. Poorly considered spaces can work against the people inside them. We connect design and building expertise to create places that look refined, sound balanced and feel intuitive.</p><a class="text-link" href="#about">Discover our thinking <span>↗</span></a></div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 px-4 bg-gray-100">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-2 text-center text-gray-800">Our Services</h2>
-            <p class="text-gray-600 text-center mb-12">Comprehensive construction and real estate solutions</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="text-4xl mb-4 text-teal-600">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Construction & Renovation</h3>
-                    <p class="text-gray-600">Expert building and refurbishing tailored to your specific needs and requirements.</p>
-                </div>
-                <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="text-4xl mb-4 text-teal-600">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Real Estate Development</h3>
-                    <p class="text-gray-600">Innovative property solutions for a growing world with sustainable practices.</p>
-                </div>
-                <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="text-4xl mb-4 text-teal-600">
-                        <i class="fas fa-pencil-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Design & Consultancy</h3>
-                    <p class="text-gray-600">Creative designs and expert advice for your projects from concept to completion.</p>
-                </div>
-                <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="text-4xl mb-4 text-teal-600">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Global Projects</h3>
-                    <p class="text-gray-600">Collaborating worldwide for sustainable growth and international standards.</p>
-                </div>
-            </div>
-        </div>
+    <section class="services section-pad" id="services">
+      <div class="section-heading"><div><p class="eyebrow">WHAT WE DO</p><h2>One vision.<br><em>Integrated expertise.</em></h2></div><p>From the first conversation to the finishing detail, we coordinate the elements that make a space work as one.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><span class="service-no">01</span><div class="service-icon">✳</div><h3>Luxury interiors</h3><p>Human-centred spaces shaped by materiality, proportion, texture and detail.</p><a href="#contact" aria-label="Enquire about luxury interiors">Enquire <span>↗</span></a></article>
+        <article class="service-card"><span class="service-no">02</span><div class="service-icon">◉</div><h3>Acoustic solutions</h3><p>Acoustic treatment and systems that support speech clarity, comfort and control.</p><a href="#contact" aria-label="Enquire about acoustic solutions">Enquire <span>↗</span></a></article>
+        <article class="service-card"><span class="service-no">03</span><div class="service-icon">☼</div><h3>Architectural lighting</h3><p>Layered lighting strategies that balance atmosphere, function and visual comfort.</p><a href="#contact" aria-label="Enquire about architectural lighting">Enquire <span>↗</span></a></article>
+        <article class="service-card"><span class="service-no">04</span><div class="service-icon">⌂</div><h3>Construction & refurbishment</h3><p>Building, renovation and project delivery with attention to coordination and finish.</p><a href="#contact" aria-label="Enquire about construction and refurbishment">Enquire <span>↗</span></a></article>
+      </div>
     </section>
 
-    <!-- Portfolio Gallery -->
-    <section id="portfolio" class="py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-2 text-center text-gray-800">Our Portfolio</h2>
-            <p class="text-gray-600 text-center mb-8">Explore our completed projects across different categories</p>
-            <div class="flex justify-center mb-8 flex-wrap gap-2">
-                <button class="bg-teal-600 px-4 py-2 rounded-lg text-white hover:bg-teal-700 transition">All Projects</button>
-                <button class="bg-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:bg-teal-600 hover:text-white transition">Residential</button>
-                <button class="bg-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:bg-teal-600 hover:text-white transition">Commercial</button>
-                <button class="bg-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:bg-teal-600 hover:text-white transition">Luxury</button>
-                <button class="bg-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:bg-teal-600 hover:text-white transition">Infrastructure</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="portfolio-item group">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern residential building" loading="lazy">
-                    <div class="bg-white p-4 shadow-md">
-                        <h3 class="font-semibold text-lg">Modern Family Home</h3>
-                        <p class="text-gray-600">Residential</p>
-                    </div>
-                </div>
-                <div class="portfolio-item group">
-                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Office building" loading="lazy">
-                    <div class="bg-white p-4 shadow-md">
-                        <h3 class="font-semibold text-lg">Corporate Office Complex</h3>
-                        <p class="text-gray-600">Commercial</p>
-                    </div>
-                </div>
-                <div class="portfolio-item group">
-                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury villa" loading="lazy">
-                    <div class="bg-white p-4 shadow-md">
-                        <h3 class="font-semibold text-lg">Beachfront Luxury Villa</h3>
-                        <p class="text-gray-600">Luxury</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-8">
-                <a href="#portfolio" class="bg-teal-600 px-6 py-3 rounded-lg hover:bg-teal-700 text-white font-semibold inline-flex items-center btn">
-                    View Full Portfolio <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
+    <section class="manifesto">
+      <div class="manifesto-image"></div><div class="manifesto-copy"><p class="eyebrow light">THE COLORFUL HOMES METHOD</p><h2>Diagnose.<br><em>Design.</em><br>Deliver.</h2><p>We start by understanding how a space should work for the people who use it. Then we bring the right design, technical and construction decisions together—so the result is more than a finish. It is a better experience.</p><a class="button button-outline" href="#contact">Tell us what you are planning <span>↗</span></a></div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 px-4 bg-teal-600 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12">What Our Clients Say</h2>
-            <div class="relative h-72">
-                <div class="testimonial-slide active">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-20 h-20 rounded-full mx-auto mb-4">
-                    <p class="text-lg italic mb-4">"Colorful Homes transformed our vision into reality. The attention to detail is unmatched and they delivered our project ahead of schedule."</p>
-                    <span class="block font-semibold">- John Doe, Lagos</span>
-                </div>
-                <div class="testimonial-slide">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-20 h-20 rounded-full mx-auto mb-4">
-                    <p class="text-lg italic mb-4">"I'm extremely impressed with the quality of work and professionalism. They handled our commercial project with expertise and care."</p>
-                    <span class="block font-semibold">- Sarah Johnson, Abuja</span>
-                </div>
-                <div class="testimonial-slide">
-                    <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Client" class="w-20 h-20 rounded-full mx-auto mb-4">
-                    <p class="text-lg italic mb-4">"The team at Colorful Homes made our dream home a reality. Their design insights saved us money while achieving a better result."</p>
-                    <span class="block font-semibold">- Michael Adekunle, Port Harcourt</span>
-                </div>
-            </div>
-            <div class="flex justify-center mt-8 space-x-2">
-                <button class="testimonial-indicator w-3 h-3 rounded-full bg-teal-300" aria-label="Show testimonial 1"></button>
-                <button class="testimonial-indicator w-3 h-3 rounded-full bg-teal-800" aria-label="Show testimonial 2"></button>
-                <button class="testimonial-indicator w-3 h-3 rounded-full bg-teal-800" aria-label="Show testimonial 3"></button>
-            </div>
-        </div>
+    <section class="work section-pad" id="work">
+      <div class="section-heading"><div><p class="eyebrow">SELECTED EXPERIENCE</p><h2>Built around<br><em>real-world needs.</em></h2></div><p>A selection of project types and specialist work across the built environment. Project imagery shown here is illustrative; ask us for relevant project references.</p></div>
+      <div class="work-grid">
+        <article class="work-card work-large"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" alt="Contemporary hospitality interior with warm layered lighting" loading="lazy"><div class="work-caption"><span>INTERIOR DESIGN</span><h3>Hospitality & premium spaces</h3></div></article>
+        <article class="work-card"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=85" alt="Large event hall set for a gathering" loading="lazy"><div class="work-caption"><span>ACOUSTIC ENVIRONMENTS</span><h3>Auditoriums & event halls</h3></div></article>
+        <article class="work-card"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Modern residential interior" loading="lazy"><div class="work-caption"><span>RESIDENTIAL</span><h3>Homes & refurbishments</h3></div></article>
+      </div>
+      <p class="work-footnote">Illustrative photography, not represented as photographs of completed Colorful Homes projects.</p>
     </section>
 
-    <!-- Call-to-Action Section -->
-    <section id="quote" class="py-20 px-4 bg-cover bg-center bg-fixed" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');">
-        <div class="max-w-3xl mx-auto text-center text-white">
-            <h2 class="text-3xl font-bold mb-4">Ready to build your dream project?</h2>
-            <p class="text-xl mb-8">Get a free, no-obligation quote from our experts today</p>
-            <a href="#contact" class="bg-orange-600 px-8 py-4 rounded-lg hover:bg-orange-700 text-white font-semibold text-lg btn">
-                Request a Quote Now
-            </a>
-        </div>
+    <section class="about section-pad" id="about">
+      <div class="about-visual"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Thoughtfully detailed modern interior with natural materials" loading="lazy"><span class="image-stamp">THOUGHTFUL<br>BY DESIGN</span></div>
+      <div class="about-copy"><p class="eyebrow">WHO WE ARE</p><h2>We build for the<br><em>human experience.</em></h2><p>Colorful Homes Construction Company is a Nigerian building and interior solutions venture focused on the relationship between design, technical performance and the way people experience spaces.</p><p>Our work brings together construction and refurbishment, luxury interior thinking, architectural lighting and acoustic solutions for residential, commercial, hospitality and worship environments.</p><div class="principles"><div><b>01</b><span>Design with intention</span></div><div><b>02</b><span>Engineer the experience</span></div><div><b>03</b><span>Deliver with care</span></div></div><a class="text-link" href="#contact">Work with us <span>↗</span></a></div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 bg-gray-50">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
-            <div class="w-full md:w-1/2">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">Get in Touch</h2>
-                <form id="contact-form" class="space-y-4">
-                    <div>
-                        <label for="name" class="block text-gray-700 mb-1">Name</label>
-                        <input type="text" id="name" placeholder="Your name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                        <p class="error-message hidden mt-1" id="name-error">Please enter your name</p>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-gray-700 mb-1">Email</label>
-                        <input type="email" id="email" placeholder="Your email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                        <p class="error-message hidden mt-1" id="email-error">Please enter a valid email</p>
-                    </div>
-                    <div>
-                        <label for="phone" class="block text-gray-700 mb-1">Phone</label>
-                        <input type="tel" id="phone" placeholder="Your phone number" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                        <p class="error-message hidden mt-1" id="phone-error">Please enter a valid phone number</p>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-gray-700 mb-1">Message</label>
-                        <textarea id="message" placeholder="How can we help you?" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none h-32"></textarea>
-                        <p class="error-message hidden mt-1" id="message-error">Please enter your message</p>
-                    </div>
-                    <button type="submit" class="bg-teal-600 px-6 py-3 rounded-lg hover:bg-teal-700 text-white font-semibold w-full btn">
-                        Send Message
-                    </button>
-                </form>
-                <div id="form-message" class="message hidden mt-4"></div>
-            </div>
-            <div class="w-full md:w-1/2">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">Contact Details</h2>
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <i class="fas fa-map-marker-alt text-teal-600 text-xl mt-1 mr-4"></i>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Address</h3>
-                            <p class="text-gray-600">No. 6 High Level, Makurdi, Benue State, Nigeria</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-phone text-teal-600 text-xl mr-4"></i>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Phone</h3>
-                            <p class="text-gray-600">+234 706 176 7623</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope text-teal-600 text-xl mr-4"></i>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Email</h3>
-                            <p class="text-gray-600">colorfulhomes16@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-clock text-teal-600 text-xl mr-4"></i>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Working Hours</h3>
-                            <p class="text-gray-600">Monday - Friday: 8AM - 6PM</p>
-                            <p class="text-gray-600">Saturday: 9AM - 1PM</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8 h-64 bg-gray-200 rounded-lg overflow-hidden">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.020508149987!2d8.524722!3d7.7325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDMn
+    <section class="audiences section-pad">
+      <p class="eyebrow light">WHO WE WORK WITH</p><h2>Good spaces bring<br><em>people together.</em></h2>
+      <div class="audience-list"><span>Architects & consultants</span><span>Developers & property owners</span><span>Churches & event centres</span><span>Hotels & hospitality brands</span><span>Corporate organisations</span><span>Homeowners</span></div>
+    </section>
+
+    <section class="contact section-pad" id="contact">
+      <div class="contact-copy"><p class="eyebrow">LET'S CREATE SOMETHING MEANINGFUL</p><h2>Have a space<br>in mind? <em>Let's talk.</em></h2><p>Share a little about your project. We will use your details to prepare a WhatsApp enquiry so our team can follow up with you.</p><div class="contact-details"><a href="tel:+2347061767623"><span>CALL</span>+234 706 176 7623</a><a href="mailto:colorfulhomes16@gmail.com"><span>EMAIL</span>colorfulhomes16@gmail.com</a><p><span>LOCATION</span>Makurdi, Benue State, Nigeria</p></div></div>
+      <form class="contact-form" id="contact-form">
+        <label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="How should we address you?" required>
+        <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <label for="service">What do you need?</label><select id="service" name="service" required><option value="">Select a service</option><option>Luxury interiors</option><option>Acoustic solutions</option><option>Architectural lighting</option><option>Construction & refurbishment</option><option>Integrated project / consultation</option></select>
+        <label for="message">Tell us about your project</label><textarea id="message" name="message" rows="4" placeholder="Location, project type, timeline and what you have in mind..." required></textarea>
+        <button class="button button-dark" type="submit">Continue on WhatsApp <span>↗</span></button>
+        <p class="form-note" id="form-note" aria-live="polite">Your message will open in WhatsApp for you to review and send.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span class="brand-name">COLORFUL<span>HOMES</span><small>CONSTRUCTION COMPANY</small></span></a><p>Luxury Spaces • Intelligent Acoustics</p><div class="footer-bottom"><span>© <span id="year"></span> Colorful Homes Construction Company</span><a href="#top">Back to top ↑</a><span>Makurdi, Nigeria</span></div></footer>
+</body>
+</html>
