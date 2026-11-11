@@ -3,3 +3,14 @@
 .brand-logo{display:block;flex:0 1 auto;width:auto;height:34px;max-height:34px;max-width:180px;object-fit:contain;object-position:left center}
 .footer-brand .brand-logo{height:34px;max-height:34px;max-width:190px}
 @media(max-width:700px){.brand-logo{height:30px;max-height:30px;max-width:145px}.footer-brand .brand-logo{height:30px;max-height:30px;max-width:155px}}
+
+/* Header logo: lock to the original compact brand footprint */
+.site-header .brand{flex:0 1 auto;min-width:0;max-width:190px;overflow:hidden}
+.site-header .brand-logo{display:block!important;flex:none!important;width:180px!important;height:34px!important;max-width:180px!important;max-height:34px!important;object-fit:contain!important;object-position:left center!important}
+.site-header .primary-nav{flex:0 0 auto}
+@media(max-width:700px){
+  .site-header{height:74px;gap:10px}
+  .site-header .brand{max-width:150px}
+  .site-header .brand-logo{width:145px!important;height:30px!important;max-width:145px!important;max-height:30px!important}
+  .site-header .menu-toggle{flex:0 0 42px;margin-left:auto}
+}
