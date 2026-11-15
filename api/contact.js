@@ -36,9 +36,7 @@ export default async function handler(req, res) {
     let contactId, method;
     if (found.results?.length) {
       contactId = found.results[0].id;
-      const update = await fetch(`https://api.hubapi.com/crm/v3/objects/contacts/${contactId}`, { method: "PATCH", headers, body: JSON.stringify({ properties }) });
-      if (!update.ok) return reply(res, 502, { error: "Could not update the existing CRM contact." });
-      method = "updated";
+      method = "matched";
     } else {
       const create = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", { method: "POST", headers, body: JSON.stringify({ properties }) });
       if (!create.ok) return reply(res, 502, { error: "Could not create the CRM contact. Check the token's contact-write permission." });
