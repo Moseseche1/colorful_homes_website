@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   const origin = req.headers.origin;
   const host = req.headers.host;
   if (origin && host && new URL(origin).host !== host) return reply(res, 403, { error: "Origin not allowed." });
-  const name = clean(req.body?.name, 120);
+  if (clean(req.body?.website, 200)) return reply(res, 200, { ok: true });\n  const name = clean(req.body?.name, 120);
   const email = clean(req.body?.email, 200).toLowerCase();
   const phone = clean(req.body?.phone, 50);
   const service = clean(req.body?.service, 120);
