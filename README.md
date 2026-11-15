@@ -5,7 +5,8 @@ Premium responsive website and lead-generation foundation for Colorful Homes.
 ## Website
 - Luxury interiors, intelligent acoustics, architectural lighting, construction and refurbishment.
 - Responsive navigation, accessible contact form, click-to-call and WhatsApp handoff.
-- Enquiry form posts to a server-side API; when CRM credentials are not configured, the WhatsApp path remains available.
+- Enquiry form posts to a server-side API, requires explicit consent, and falls back to WhatsApp when CRM credentials are not configured.
+- A public privacy notice explains enquiry data use and third-party services.
 - Gallery images are illustrative. Replace them with approved project photography before presenting them as completed work.
 
 ## Secure lead platform
