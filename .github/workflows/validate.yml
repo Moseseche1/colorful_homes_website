@@ -1,0 +1,18 @@
+name: Validate website
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, development/lead-platform-portfolio]
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check serverless API syntax
+        run: |
+          for file in api/*.js; do node --check "$file"; done
+          node --check js/main.js
