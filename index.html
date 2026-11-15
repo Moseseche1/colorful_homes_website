@@ -114,18 +114,22 @@
     </section>
 
     <section class="contact section-pad" id="contact">
-      <div class="contact-copy"><p class="eyebrow">LET'S CREATE SOMETHING MEANINGFUL</p><h2>Have a space<br>in mind? <em>Let's talk.</em></h2><p>Share a little about your project. We will use your details to prepare a WhatsApp enquiry so our team can follow up with you.</p><div class="contact-details"><a href="tel:+2347061767623"><span>CALL</span>+234 706 176 7623</a><a href="mailto:colorfulhomes1@gmail.com"><span>EMAIL</span>colorfulhomes1@gmail.com</a><p><span>LOCATION</span>Makurdi, Benue State, Nigeria</p></div></div>
+      <div class="contact-copy"><p class="eyebrow">LET'S CREATE SOMETHING MEANINGFUL</p><h2>Have a space<br>in mind? <em>Let's talk.</em></h2><p>Share your project details. We will securely send your enquiry to our CRM when connected, then open WhatsApp so you can contact our team directly.</p><div class="contact-details"><a href="tel:+2347061767623"><span>CALL</span>+234 706 176 7623</a><a href="mailto:colorfulhomes1@gmail.com"><span>EMAIL</span>colorfulhomes1@gmail.com</a><p><span>LOCATION</span>Makurdi, Benue State, Nigeria</p></div></div>
       <form class="contact-form" id="contact-form">
         <label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="How should we address you?" required>
         <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <label for="phone">Phone number (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+234...">
+        <label for="company">Company / organisation (optional)</label><input id="company" name="company" autocomplete="organization" placeholder="Your organisation">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot" style="position:absolute;left:-10000px;width:1px;height:1px" aria-label="Leave this field empty">
         <label for="service">What do you need?</label><select id="service" name="service" required><option value="">Select a service</option><option>Luxury interiors</option><option>Acoustic solutions</option><option>Architectural lighting</option><option>Construction & refurbishment</option><option>Integrated project / consultation</option></select>
         <label for="message">Tell us about your project</label><textarea id="message" name="message" rows="4" placeholder="Location, project type, timeline and what you have in mind..." required></textarea>
+        <label class="consent-row"><input type="checkbox" name="consent" value="yes" required> I agree that Colorful Homes may use these details to respond to this project enquiry. See the <a href="/privacy.html" target="_blank" rel="noopener">privacy notice</a>.</label>
         <button class="button button-dark" type="submit">Continue on WhatsApp <span>↗</span></button>
-        <p class="form-note" id="form-note" aria-live="polite">Your message will open in WhatsApp for you to review and send.</p>
+        <p class="form-note" id="form-note" aria-live="polite">Your enquiry will be prepared for our team and opened in WhatsApp for you to review and send.</p>
       </form>
     </section>
   </main>
 
-  <footer class="site-footer"><a class="brand footer-brand" href="#top"><img class="brand-logo" src="images/colorful-homes-logo.jpg" alt="Colorful Homes — Luxury Spaces, Intelligent Acoustics"></a><p>Luxury Spaces • Intelligent Acoustics</p><div class="footer-bottom"><span>© <span id="year"></span> Colorful Homes Construction Company</span><a href="#top">Back to top ↑</a><span>Makurdi, Nigeria</span></div></footer>
+  <footer class="site-footer"><a class="brand footer-brand" href="#top"><img class="brand-logo" src="images/colorful-homes-logo.jpg" alt="Colorful Homes — Luxury Spaces, Intelligent Acoustics"></a><p>Luxury Spaces • Intelligent Acoustics</p><div class="footer-bottom"><span>© <span id="year"></span> Colorful Homes Construction Company</span><a href="/privacy.html">Privacy notice</a><a href="/admin/login.html">Team access ↗</a><a href="#top">Back to top ↑</a><span>Makurdi, Nigeria</span></div></footer>
 </body>
 </html>
