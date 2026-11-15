@@ -1,0 +1,6 @@
+{
+  "name": "colorful-homes-website",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" }
+}
