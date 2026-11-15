@@ -1,4 +1,4 @@
-import { validSession } from "./_session.js";
+import { validSession } from "../lib/session.js";
 export default async function handler(req, res) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
   if (!validSession(req)) return res.status(401).json({ error: "Please sign in again." });
