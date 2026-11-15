@@ -13,7 +13,8 @@ export default async function handler(req, res) {
   const phone = clean(req.body?.phone, 50);
   const service = clean(req.body?.service, 120);
   const message = clean(req.body?.message, 2500);
-  const company = clean(req.body?.company, 150);\n  const consent = clean(req.body?.consent, 10);
+  const company = clean(req.body?.company, 150);
+  const consent = clean(req.body?.consent, 10);
   if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !["Luxury interiors","Acoustic solutions","Architectural lighting","Construction & refurbishment","Integrated project / consultation"].includes(service) || !message || consent !== "yes") return reply(res, 400, { error: "Please complete the required fields with a valid email." });
   const token = process.env.HUBSPOT_ACCESS_TOKEN;
   if (!token) return reply(res, 503, { error: "CRM capture is not configured. Use the WhatsApp enquiry instead." });
