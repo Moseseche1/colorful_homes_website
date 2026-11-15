@@ -7,13 +7,14 @@ export default async function handler(req, res) {
   const origin = req.headers.origin;
   const host = req.headers.host;
   if (origin && host && new URL(origin).host !== host) return reply(res, 403, { error: "Origin not allowed." });
-  if (clean(req.body?.website, 200)) return reply(res, 200, { ok: true });\n  const name = clean(req.body?.name, 120);
+  if (clean(req.body?.website, 200)) return reply(res, 200, { ok: true });
+  const name = clean(req.body?.name, 120);
   const email = clean(req.body?.email, 200).toLowerCase();
   const phone = clean(req.body?.phone, 50);
   const service = clean(req.body?.service, 120);
   const message = clean(req.body?.message, 2500);
   const company = clean(req.body?.company, 150);
-  if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !service || !message) return reply(res, 400, { error: "Please complete the required fields with a valid email." });
+  if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !["Luxury interiors","Acoustic solutions","Architectural lighting","Construction & refurbishment","Integrated project / consultation"].includes(service) || !message) return reply(res, 400, { error: "Please complete the required fields with a valid email." });
   const token = process.env.HUBSPOT_ACCESS_TOKEN;
   if (!token) return reply(res, 503, { error: "CRM capture is not configured. Use the WhatsApp enquiry instead." });
   const headers = { Authorization: `Bearer ${token}`, "Content-Type": "application/json" };
